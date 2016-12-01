@@ -2,7 +2,7 @@
 /**
  * Fired when the plugin is uninstalled.
  *
- * @package     ReduxFramework\Uninstall
+ * @package     AvadaReduxFramework\Uninstall
  * @author      Dovy Paukstys <info@simplerain.com>
  * @since       3.0.0
  */

@@ -1,6 +1,6 @@
 <wpml-config>
     <admin-texts>
-        <key name="redux_demo">
+        <key name="avadaredux_demo">
             <key name="wpml-text"/>
         </key>
     </admin-texts>
