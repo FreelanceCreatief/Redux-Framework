@@ -62,7 +62,7 @@
 		if ( avadaredux.fields.hasOwnProperty( "editor" ) ) {
 			$.each(
 				avadaredux.fields.editor, function( $key, $index ) {
-					if (typeof(tinyMCE) !== 'undefined') {
+					if ( typeof(tinyMCE) !== 'undefined' ) {
 						var editor = tinyMCE.get( $key );
 						if ( editor ) {
 							editor.save();
@@ -104,7 +104,7 @@
 				error: function( response ) {
 					if ( !window.console ) console = {};
 					console.log = console.log || function( name, data ) {
-					};
+						};
 					console.log( avadaredux.ajax.console );
 					console.log( response.responseText );
 					jQuery( '.avadaredux-action_bar input' ).removeAttr( 'disabled' );
@@ -612,7 +612,7 @@
 			}
 		);
 
-		if (avadaredux.last_tab !== undefined) {
+		if ( avadaredux.last_tab !== undefined ) {
 			$( '#' + avadaredux.last_tab + '_section_group_li_a' ).click();
 			return;
 		}
@@ -664,7 +664,7 @@
 				if ( typeof avadaredux.field_objects != 'undefined' && avadaredux.field_objects[type] && avadaredux.field_objects[type] ) {
 					avadaredux.field_objects[type].init();
 				}
-				if ( !avadaredux.customizer && $( this ).hasClass( 'avadaredux_remove_th' )  ) {
+				if ( !avadaredux.customizer && $( this ).hasClass( 'avadaredux_remove_th' ) ) {
 
 					var tr = $( this ).parents( 'tr:first' );
 					var th = tr.find( 'th:first' );
@@ -1111,10 +1111,10 @@
 		switch ( operation ) {
 			case '=':
 			case 'equals':
-//                if ($.isPlainObject(parentValue)) {
-//                    var arr = Object.keys(parentValue).map(function (key) {return parentValue[key]});
-//                    parentValue = arr;
-//                }
+				//                if ($.isPlainObject(parentValue)) {
+				//                    var arr = Object.keys(parentValue).map(function (key) {return parentValue[key]});
+				//                    parentValue = arr;
+				//                }
 
 				if ( $.isArray( parentValue ) ) {
 					$( parentValue[0] ).each(
@@ -1190,7 +1190,7 @@
 						}
 					}
 				}
-			break;
+				break;
 
 			case '>':
 			case 'greater':
@@ -1198,7 +1198,7 @@
 				if ( parseFloat( parentValue ) > parseFloat( checkValue ) ) {
 					show = true;
 				}
-			break;
+				break;
 
 			case '>=':
 			case 'greater_equal':
@@ -1206,7 +1206,7 @@
 				if ( parseFloat( parentValue ) >= parseFloat( checkValue ) ) {
 					show = true;
 				}
-			break;
+				break;
 
 			case '<':
 			case 'less':
@@ -1214,7 +1214,7 @@
 				if ( parseFloat( parentValue ) < parseFloat( checkValue ) ) {
 					show = true;
 				}
-			break;
+				break;
 
 			case '<=':
 			case 'less_equal':
@@ -1222,21 +1222,23 @@
 				if ( parseFloat( parentValue ) <= parseFloat( checkValue ) ) {
 					show = true;
 				}
-			break;
+				break;
 
 			case 'contains':
-				if ($.isPlainObject(parentValue)) {
-					checkValue = Object.keys(checkValue).map(function (key) {
-						return [key, checkValue[key]];
-					});
-					parentValue = arr;
+				if ( $.isPlainObject( parentValue ) ) {
+					parentValue = Object.keys( parentValue ).map(
+						function( key ) {
+							return [key, parentValue[key]];
+						}
+					);
 				}
 
-				if ($.isPlainObject(checkValue)) {
-					arr = Object.keys(checkValue).map(function (key) {
-						return checkValue[key];
-					});
-					checkValue = arr;
+				if ( $.isPlainObject( checkValue ) ) {
+					checkValue = Object.keys( checkValue ).map(
+						function( key ) {
+							return [key, checkValue[key]];
+						}
+					);
 				}
 
 				if ( $.isArray( checkValue ) ) {
@@ -1244,16 +1246,16 @@
 						function( idx, val ) {
 
 							var breakMe = false;
-							var toFind  = val[0];
+							var toFind = val[0];
 							var findVal = val[1];
 
-							$(parentValue).each(
-								function (i, v) {
+							$( parentValue ).each(
+								function( i, v ) {
 									var toMatch = v[0];
 									var matchVal = v[1];
 
-									if (toFind === toMatch) {
-										if (findVal == matchVal) {
+									if ( toFind === toMatch ) {
+										if ( findVal == matchVal ) {
 											show = true;
 											breakMe = true;
 
@@ -1263,7 +1265,7 @@
 								}
 							);
 
-							if (breakMe === true) {
+							if ( breakMe === true ) {
 								return false;
 							}
 						}
@@ -1273,24 +1275,26 @@
 						show = true;
 					}
 				}
-			break;
+				break;
 
 			case 'doesnt_contain':
 			case 'not_contain':
-				if ($.isPlainObject(parentValue)) {
-					arr = Object.keys(parentValue).map(function (key) {
-						return parentValue[key];
-					});
+				if ( $.isPlainObject( parentValue ) ) {
+					arr = Object.keys( parentValue ).map(
+						function( key ) {
+							return parentValue[key];
+						}
+					);
 					parentValue = arr;
 				}
-
-				if ($.isPlainObject(checkValue)) {
-					arr = Object.keys(checkValue).map(function (key) {
-						return checkValue[key];
-					});
+				if ( $.isPlainObject( checkValue ) ) {
+					arr = Object.keys( checkValue ).map(
+						function( key ) {
+							return checkValue[key];
+						}
+					);
 					checkValue = arr;
 				}
-
 				if ( $.isArray( checkValue ) ) {
 					$( checkValue ).each(
 						function( idx, val ) {
@@ -1304,19 +1308,19 @@
 						show = true;
 					}
 				}
-			break;
+				break;
 
 			case 'is_empty_or':
 				if ( parentValue === "" || parentValue == checkValue ) {
 					show = true;
 				}
-			break;
+				break;
 
 			case 'not_empty_and':
 				if ( parentValue !== "" && parentValue != checkValue ) {
 					show = true;
 				}
-			break;
+				break;
 
 			case 'is_empty':
 			case 'empty':
@@ -1324,7 +1328,7 @@
 				if ( !parentValue || parentValue === "" || parentValue === null ) {
 					show = true;
 				}
-			break;
+				break;
 
 			case 'not_empty':
 			case '!empty':
@@ -1332,7 +1336,7 @@
 				if ( parentValue && parentValue !== "" && parentValue !== null ) {
 					show = true;
 				}
-			break;
+				break;
 		}
 
 		return show;
@@ -1565,7 +1569,7 @@
 							$( '#avadaredux-header' ).append( '<div class="rAds"></div>' );
 							el = $( '#avadaredux-header' );
 						} else {
-							$('#customize-theme-controls ul').first().prepend('<li id="avadaredux_rAds" class="accordion-section rAdsContainer" style="position: relative;"><div class="rAds"></div></li>');
+                            $( '#customize-theme-controls ul' ).first().prepend( '<li id="avadaredux_rAds" class="accordion-section rAdsContainer" style="position: relative;"><div class="rAds"></div></li>' );
 							el = $( '#avadaredux_rAds' );
 						}
 
@@ -1645,8 +1649,15 @@ function avadaredux_change( variable ) {
 		jQuery( '#avadaredux-compiler-hook' ).val( 1 );
 	}
 
+//    var test = jQuery( variable ).parents( '.redux-field-container:first' );
+//    if ( test.hasClass( 'redux-container-typography' ) && redux.field_objects.typography ) {
+//        redux.field_objects.typography.change( test );
+//    }
+
 	var rContainer = jQuery( variable ).parents( '.avadaredux-container:first' );
+
 	var parentID = jQuery( variable ).closest( '.avadaredux-group-tab' ).attr( 'id' );
+
 	// Let's count down the errors now. Fancy.  ;)
 	var id = parentID.split( '_' );
 	id = id[0];
@@ -1900,3 +1911,20 @@ function colorNameToHex( colour ) {
 
 	return colour;
 }
+
+function redux_hook( object, functionName, callback, before ) {
+    (function( originalFunction ) {
+        object[functionName] = function() {
+
+            if ( before === true ) {
+                callback.apply( this, [returnValue, originalFunction, arguments] );
+            }
+            var returnValue = originalFunction.apply( this, arguments );
+            if ( before !== true ) {
+                callback.apply( this, [returnValue, originalFunction, arguments] );
+            }
+
+            return returnValue;
+        };
+    }( object[functionName] ));
+} 

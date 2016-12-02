@@ -124,7 +124,7 @@ if( !class_exists( 'AvadaReduxFramework_color_rgba' ) ) {
 								$color = AvadaRedux_Helpers::hex2rgba($this->value['color'], $this->value['alpha']);
 						}
 
-						if ($this->value['rgba'] == ''){
+						if ($this->value['rgba'] == '' && $this->value['color'] != '' ){
 								$this->value['rgba'] = AvadaRedux_Helpers::hex2rgba($this->value['color'], $this->value['alpha']);
 						}
 

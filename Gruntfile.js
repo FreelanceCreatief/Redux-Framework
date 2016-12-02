@@ -137,10 +137,9 @@ module.exports = function( grunt ) {
 					'AvadaReduxCore/inc/fields/spinner/field_spinner.js',
 					'AvadaReduxCore/inc/fields/switch/field_switch.js',
 					'AvadaReduxCore/inc/fields/typography/field_typography.js',
-					// 'AvadaReduxCore/inc/fields/**/*.js',
-					'AvadaReduxCore/extensions/**/*.js',
-					'AvadaReduxCore/extensions/**/**/*.js',
-					'AvadaReduxCore/assets/js/avadaredux.js'
+					//'ReduxCore/inc/extensions/customizer/extension_customizer.js',
+					'AvadaReduxCore/inc/extensions/import_export/import_export/field_import_export.js',
+					'AvadaReduxCore/inc/extensions/options_object/options_object/field_options_object.js',					'AvadaReduxCore/assets/js/avadaredux.js'
 				]
 			},
 

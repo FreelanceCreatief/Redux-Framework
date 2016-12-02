@@ -216,7 +216,8 @@
 					$check = array();
 				}
 
-				if ( isset( $avadaredux->args['dev_mode'] ) && $avadaredux->args['dev_mode'] == true && ! ( isset( $avadaredux->args['forced_dev_mode_off'] ) && $avadaredux->args['forced_dev_mode_off'] == true ) ) {
+				//if ( isset( $avadaredux->args['dev_mode'] ) && $avadaredux->args['dev_mode'] == true && ! ( isset( $avadaredux->args['forced_dev_mode_off'] ) && $avadaredux->args['forced_dev_mode_off'] == true ) ) {
+				if ( isset( $redux->args['dev_mode'] ) && $redux->args['dev_mode'] == true  ) {      
 						update_user_option( get_current_user_id(), 'r_tru_u_x', array(
 							'id'      => '',
 							'expires' => 60 * 60 * 24

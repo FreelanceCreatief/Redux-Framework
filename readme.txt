@@ -1,45 +1,45 @@
-=== AvadaRedux Framework ===
+=== Redux Framework ===
 Contributors: dovyp, kprovance
-Donate link: http://ideas.avadareduxframework.com
+Donate link: http://ideas.reduxframework.com
 Tags: admin, admin interface, options, theme options, plugin options, options framework, settings, web fonts, google fonts
 Requires at least: 3.5.1
-Tested up to: 4.5
-Stable tag: 3.5.9
-License: GPLv3 or later
+Tested up to: 4.8
+Stable tag: 3.6.2
+License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-AvadaRedux is a simple, truly extensible and fully responsive options framework for WordPress themes and plugins. Ships with an integrated demo.
+Redux is a simple, truly extensible and fully responsive options framework for WordPress themes and plugins. Ships with an integrated demo.
 
 == Description ==
 
-AvadaRedux is a simple, truly extensible and fully responsive options framework for WordPress themes and plugins. Built on the WordPress Settings API, AvadaRedux supports a multitude of field types as well as: custom error handling, custom fields & validation types, and import/export functionality.
+Redux is a simple, truly extensible and fully responsive options framework for WordPress themes and plugins. Built on the WordPress Settings API, Redux supports a multitude of field types as well as: custom error handling, custom fields & validation types, and import/export functionality.
 
-But what does AvadaRedux actually DO? We don't believe that theme and plugin
+But what does Redux actually DO? We don't believe that theme and plugin
 developers should have to reinvent the wheel every time they start work on a
-project. AvadaRedux is designed to simplify the development cycle by providing a
+project. Redux is designed to simplify the development cycle by providing a
 streamlined, extensible framework for developers to build on. Through a
 simple, well-documented config file, third-party developers can build out an
 options panel limited only by their own imagination in a fraction of the time
 it would take to build from the ground up!
 
 = Online Demo =
-Don't take our word for it, check out our online demo and try AvadaRedux without installing a thing!
-[**http://demo.avadaredux.io/**](http://demo.avadaredux.io/)
+Don't take our word for it, check out our online demo and try Redux without installing a thing!
+[**http://demo.redux.io/**](http://demo.redux.io/)
 
-= Use the AvadaRedux Builder to Get Started =
-Want to use AvadaRedux, but not sure what to do? Use our [builder](http://build.avadareduxframework.com/)! It will allow you to make
-a custom theme based on [_s](http://underscores.me), [TGM](http://tgmpluginactivation.com), and [AvadaRedux](http://avadareduxframework.com), and any AvadaRedux arguments you want to set.
+= Use the Redux Builder to Get Started =
+Want to use Redux, but not sure what to do? Use our [builder](http://build.reduxframework.com/)! It will allow you to make
+a custom theme based on [_s](http://underscores.me), [TGM](http://tgmpluginactivation.com), and [Redux](http://reduxframework.com), and any Redux arguments you want to set.
 Don't want to make your own theme? Then output a custom admin folder that you can place
 in a theme or plugin. Oh and did we mention it's free? Try it today at:
-[**http://build.avadareduxframework.com/**](http://build.avadareduxframework.com/)
+[**http://build.reduxframework.com/**](http://build.reduxframework.com/)
 
 
 = Docs & Support =
-We have extremely extensive docs. Please visit [http://docs.avadareduxframework.com/](http://docs.avadareduxframework.com/) If that doesn’t solve your concern, you should search [the issue tracker on Github](https://github.com/avadareduxframework/avadaredux-framework/issues). If you can't locate any topics that pertain to your particular issue, [post a new issue](https://github.com/avadareduxframework/avadaredux-framework/issues/new) for it. Before you submit an issue, please read [our contributing requirements](https://github.com/avadaredux-framework/avadaredux-framework/blob/master/CONTRIBUTING.md). We build off of the dev version and push to WordPress.org when all is confirmed stable and ready for release.
+We have extremely extensive docs. Please visit [http://docs.reduxframework.com/](http://docs.reduxframework.com/) If that doesn’t solve your concern, you should search [the issue tracker on Github](https://github.com/reduxframework/redux-framework/issues). If you can't locate any topics that pertain to your particular issue, [post a new issue](https://github.com/reduxframework/redux-framework/issues/new) for it. Before you submit an issue, please read [our contributing requirements](https://github.com/redux-framework/redux-framework/blob/master/CONTRIBUTING.md). We build off of the dev version and push to WordPress.org when all is confirmed stable and ready for release.
 
 
-= AvadaRedux Framework Needs Your Support =
-It is hard to continue development and support for this free plugin without contributions from users like you. If you enjoy using AvadaRedux Framework, and find it useful, please consider [making a donation](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MMFMHWUPKHKPW). Your donation will help encourage and support the plugin's continued development and better user support.
+= Redux Framework Needs Your Support =
+It is hard to continue development and support for this free plugin without contributions from users like you. If you enjoy using Redux Framework, and find it useful, please consider [making a donation](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MMFMHWUPKHKPW). Your donation will help encourage and support the plugin's continued development and better user support.
 
 = Fields Types =
 
@@ -76,7 +76,7 @@ It is hard to continue development and support for this free plugin without cont
 * Switch
 * Text
 * Textarea
-* Typography
+* Typography 
  * The most advanced typography module complete with preview, Google fonts, and auto-css output!
 
 = Additional Features =
@@ -85,57 +85,103 @@ It is hard to continue development and support for this free plugin without cont
 * MANY translations. (See below)
 * Full value escaping.
 * Required - Link visibility from parent fields. Set this to affect the visibility of the field on the parent's value. Fully nested with multiple required parents possible.
-* Output CSS Automatically - AvadaRedux generates CSS and the appropriate Google Fonts stylesheets for you on select fields. You need only specify the CSS selector to apply the CSS to (limited to certain fields).
+* Output CSS Automatically - Redux generates CSS and the appropriate Google Fonts stylesheets for you on select fields. You need only specify the CSS selector to apply the CSS to (limited to certain fields).
 * Compiler integration! A custom hook runs when any fields with the argument `compile => true` are changed.
 * Oh, and did we mention a fully integrated Google Webfonts setup that will make you so happy you'll want to cry?
 
-
+  
 = Translators & Non-English Speakers =
-We need your help to translate AvadaRedux into your language! AvadaRedux is part of the WP-Translations.org team. To help us translate AvadaRedux create a few account here: <a href="https://www.transifex.com/organization/wp-translations">https://www.transifex.com/organization/wp-translations</a>. Once you're in, you can head over to the <a href="https://www.transifex.com/projects/p/avadaredux-framework/">AvadaRedux sub-project</a> and translate away. Thank you for your assistance.
+We need your help to translate Redux into your language! Redux is part of the WP-Translations.org team. To help us translate Redux create a few account here: <a href="https://www.transifex.com/organization/wp-translations">https://www.transifex.com/organization/wp-translations</a>. Once you're in, you can head over to the <a href="https://www.transifex.com/projects/p/redux-framework/">Redux sub-project</a> and translate away. Thank you for your assistance.
 
 = Get Involved =
-AvadaRedux is an ever-changing, living system. Want to stay up to date or
-contribute? Subscribe to one of our mailing lists or join us on [Facebook](https://facebook.com/avadareduxframework) or [Twitter](https://twitter.com/avadareduxframework) or [Github](https://github.com/AvadaReduxFramework/AvadaReduxFramework)!
+Redux is an ever-changing, living system. Want to stay up to date or
+contribute? Subscribe to one of our mailing lists or join us on [Facebook](https://facebook.com/reduxframework) or [Twitter](https://twitter.com/reduxframework) or [Github](https://github.com/ReduxFramework/ReduxFramework)!
 
-NOTE: AvadaRedux is not intended to be used on its own. It requires a config file
+NOTE: Redux is not intended to be used on its own. It requires a config file
 provided by a third-party theme or plugin developer to actual do anything
 cool!
 
 == Installation ==
 
 = For Complete Documentation and Examples =
-Visit: [http://docs.avadareduxframework.com/](http://docs.avadareduxframework.com/)
+Visit: [http://docs.reduxframework.com/](http://docs.reduxframework.com/)
 
 == Frequently Asked Questions ==
 
 = Why doesn't this plugin do anything? =
 
-AvadaRedux is an options framework... in other words, it's not designed to do anything on its own! You can however activate a demo mode to see how it works.
+Redux is an options framework... in other words, it's not designed to do anything on its own! You can however activate a demo mode to see how it works. 
 
-= How can I learn more about AvadaRedux? =
+= How can I learn more about Redux? =
 
-Visit our website at [http://avadareduxframework.com/](http://avadareduxframework.com/)
+Visit our website at [http://reduxframework.com/](http://reduxframework.com/)
 
 = You don't have much content in this FAQ section =
-That's because the real FAQ section is on our site! Please visit [http://docs.avadareduxframework.com/faq/](http://docs.avadareduxframework.com/faq/)
+That's because the real FAQ section is on our site! Please visit [http://docs.reduxframework.com/faq/](http://docs.reduxframework.com/faq/)
 
 == Screenshots ==
 
-1. This is the demo mode of AvadaRedux Framework. Activate it and you will find a fully-functional admin panel that you can play with. On the Plugins page, beneath the description and an activated AvadaRedux Framework, you will find a Demo Mode link. Click that link to activate or deactivate the sample-config file AvadaRedux ships with.  Don't take our word for it, check out our online demo and try AvadaRedux without installing a thing! [**http://demo.avadareduxframework.com/wp-admin/**](http://demo.avadareduxframework.com/wp-admin/)
+1. This is the demo mode of Redux Framework. Activate it and you will find a fully-functional admin panel that you can play with. On the Plugins page, beneath the description and an activated Redux Framework, you will find a Demo Mode link. Click that link to activate or deactivate the sample-config file Redux ships with.  Don't take our word for it, check out our online demo and try Redux without installing a thing! [**http://demo.reduxframework.com/wp-admin/**](http://demo.reduxframework.com/wp-admin/)
 
 == Changelog ==
+
+## 3.6.2
+* Fixed:   #3105 - link_color output failing due to PHP error.
+* Fixed:   #3103 - WP 4.6 forces new default date format, breaking date validation.
+* Fixed:   Typography subsets error due to typo.
+* Fixed:   Extra dead files on WP.org repo. Bah SVN.
+
+## 3.6.1
+* Removed   Empty PHP file from editor field.
+* Modified: Replaced class primary function name in browser.php to __construct for PHP7 compatibility.
+* Fixed:    #3051 - Color_RBGA field RGBA value outputting zeros when color is left blank.
+* Fixed:    #3048 - Subsection tabs not including specified section class name.
+* Fixed:    Incorrect string comparison result in admin link check.  Thanks @ksere.
+* Fixed:    Check value exists before validating when used with Metabox extension.  Thanks @Enchiridion
+* Fixed:    Empty values not passing to validation_callback.
+* Fixed:    Javascript error in customizer javascript, preventing save of changed options.
+* Fixed:    #3019 - Section descriptions incorrect when opt_name contains digits.
+* Reverted: Changes to typography.  The on input variable solution was not working.
+* Fixed:    Support URL has generator was failing with an error.
+* Changed:  Typography field is now only ONE input variable. Should reduce our
+            max_input_vars errors dramatically.
+* Fixed:    Some XSS vulnerabilities only available in the backend when authenticated as a user.
+* Fixed:    Deleted old deleted files stuck in our WP.org SVN repo.
+
+
+## 3.6.0.2
+* Fixed     Outdated customizer.min.js on wp.org causing customizer failure.
+
+## 3.6.0.1
+* Fixed     Outdated redux.min.js on wp.org causing option panel failure.
+* Fixed:    #2936 - Border field outputting px with blank value.
+* Fixed:    Resolved Theme-Check php shortcode false notice.
+* Modified: No more major redirect for the Redux page, only on first install with the plugin.
+* Fixed:    IE11 bug in the customizer. Thanks @anikitas!
+* Fixed:    Customizer path issues
+* Added:    New default arguments filter by opt_name and type.  :)
+* Fixed:    #2903 - False positive flag in border field JS.  Avast doesn't like empty document ready statements.
+* Fixed:    #2880 - More issues with the extensions_url routine.
+* Fixed:    #2876 - Fixing more unvetted user contributions.
+* Modified: #2855 - Extensions now have a helper class to help composer-based installs. Thanks @2ndkauboy!
+* Fixed:    #2857 - Required 'contains' not properly evaluating with checkboxes.
+* Fixed:    #2831 - Localization was complete broken.
+* Fixed:    #2832 - CSS conflicts with Rev Slider (Hey, Rev Slider guys, you don't have to load your CSS on every admin page.  Really?)
+* Fixed:    Leftover debug echo line in basic customizer extension.
+* Added:    EXPERIMENTAL:  New parsing code in an effort to break the 1000 max_input_var issue that crops up from time to time. Thanks, @harunbasic
+* Added:    EXPERIMENTAL:  "Bugfix" for extension_url in an effort to make it correct.  Thanks, @ottok
 
 ## 3.5.9
 * Fixed:    Wordpress 4.4.1 related issues.
 * Fixed:    #2794 - User contributed code from #2716 did not contain isset and caused an index error.
-* Modified:  Added tons of wp_remote_get handlings to stop bringing down site if AvadaRedux is down.
+* Modified:  Added tons of wp_remote_get handlings to stop bringing down site if Redux is down.
 * Modified:  When some items appear or not. Making devs lives easier.  ;)
 * Updated:  parsedown.php vendor code, to deal. with PHP 7.0 errors.
 * Fixed:    #2774 - border fields set to 0 would disappear after saving.
-* Modified: Post/page settings on the media gallery window hidden for gallery field, since they are not applicable to AvadaRedux.
-* Added:    #2728 - Filter for hints HTML.  'avadaredux/hints/html'.  Thanks, @nyordanov.
+* Modified: Post/page settings on the media gallery window hidden for gallery field, since they are not applicable to Redux.
+* Added:    #2728 - Filter for hints HTML.  'redux/hints/html'.  Thanks, @nyordanov.
 * Fixed:    #2716 - Enqueue jquery sortable when select field is set to sortable.  Thanks, @josh-rathke.
-* Fixed:    #2726 - AvadaRedux fixes for WordPress 4.4.
+* Fixed:    #2726 - Redux fixes for WordPress 4.4.
 * Fixed:    #2713 - Alerts wouldn't disappear.
 * Fixed:    #2726 - WP 4.4 breaking template.php include, because the core WP guys thought it would be hilarious to break everyone else's stuff.
 * Fixed:    Specifying 'user' in a field's data argument would produce WordPress depreciation errors.
@@ -144,9 +190,9 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Fixed:    #2684 - Sorter not displaying (or saving) WordPress data when using the data argument.
 * Added:    #2673 - WP_CLI check before welcome page redirect.
 * Fixed:    #2677 - tinymce javascript errors when wp editor is disabled.
-* Modified: While in dev_mode, noticies will appear if AvadaRedux sample data in share_icons and admin_bar_links arguments is not changed.
+* Modified: While in dev_mode, noticies will appear if Redux sample data in share_icons and admin_bar_links arguments is not changed.
             This became necessary because devs are not changing this data and theme ends users are coming to us for theme support.
-* Modified: AvadaRedux links to be // instead of http:// or https:// to ensure portability for secure sites.
+* Modified: Redux links to be // instead of http:// or https:// to ensure portability for secure sites.
 * Fixed:    #2665 - For those who must have empty dirs in the extensions dir.  No more errors.
 * Added:    #2660 - Added 'user'/'users' data type to wordpress data arg.  Thanks @golchha21.
 * Fixed:    #2652 - load_plugin_textdomain using depreciated argument.
@@ -161,7 +207,7 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Fixed:    #2624 - Border field saving/output 0px when no default set.  Now accepts no default and outputs no CSS for blank values.
 * Fixed:    color_rgba no long outputs CSS with empty color values.
 * Fixed:    #2612 - pseudo classes not appending to multiple selectors in link_color output.
-* Modified: The mass data escaping of AvadaRedux Core output.  Part I.
+* Modified: The mass data escaping of Redux Core output.  Part I.
 * Fixed:    #2609 - Section not folding correctly with class argument specified.
 * Fixed:    #2607 - button_set required scalar check for array returned by terms in the data arg.  Thanks @Enchiridion.
 * Fixed:    Fixing more inconsistencies with wp_filesystem dirlist.  How about some proper documentation, Otto?
@@ -176,7 +222,7 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Fixed     Customizer customizer_only and customizer section overrides. Also global customizer => false was not working.
 * Added     Security suggestions posed in #2543 by Julio Potier from SecuPress.
 * Fixed:    'dirlist' in filesystem proxy returning permission error on empty dirs.
-* Added     setOption and getOption to AvadaRedux API.
+* Added     setOption and getOption to Redux API.
 * Added     'hide_save' argument.
 * Added:    'readonly' argument for textarea.
 * Fixed:    #2545 - CSS validator error output misconfigured.
@@ -205,8 +251,8 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Fixed:    Undefined index when removing a section.
 * Fixed:    Typography bug onload always saying settings have changed.
 * Modified: Added minified customizer JS.
-* Fixed:    AvadaRedux CUSTOMIZER! YEA!
-* Fixed:    Small echo in AvadaRedux API
+* Fixed:    Redux CUSTOMIZER! YEA!
+* Fixed:    Small echo in Redux API
 
 = 3.5.5.1 =
 * Fixed:    Sigh, PHP 5.2 issues.
@@ -219,7 +265,7 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Fixed:    Bad code in raw field hosing up the entire panel.
 * Modified: #2436 - Validation check for any validation type ending in 'not_empty' now recognized.
 * Fixed:    Undefined index for undeclared variable in Theme-Check checks.
-* Fixed:    Annoying AvadaRedux Theme-Check notices.
+* Fixed:    Annoying Redux Theme-Check notices.
 * Fixed:    How some functions were called.
 * Fixed:    Theme-Check baby! Everything working as it should with extra theme-check hints to prepare
             your theme for submission!
@@ -227,17 +273,17 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Modified: `forced_dev_mode_off` argument that will ensure dev_mode is ALWAYS off.
             PLEASE do not ship with this enabled. We will NOT provide any support for any instance that
             has this argument enabled. Disable and test prior to posting on our issue tracker.
-* Added:    `customizer_only` as a global arg that disables all of AvadaRedux except for the customizer, in
+* Added:    `customizer_only` as a global arg that disables all of Redux except for the customizer, in
             preparation for our customizer integration.
-* Modified: Dissmissable AvadaRedux Admin notices now use the WP 4.2 dismiss JS and Ajax. Pretty.
+* Modified: Dissmissable Redux Admin notices now use the WP 4.2 dismiss JS and Ajax. Pretty.
 * Modified: Admin notice code is now it's own isolated class inside core.
 * Modified: Use DB for admin notice, not flat-files. Boo.
 * Modified: Sample configs not to cause errors if multiple users use the same function name.
 * Fixed:    CDN internationalization class.
 * Modified: Parsedown so as not to throw a shortcode error that didn't actually exist.
 * Fixed:    #2446 - Non google font choice not saving in certain instances.
-* Fixed:    Added additional check in avadaredux.js to stop errors with panels containing multiple raw fields.
-* Fixed:    Hopefully, the issue of settings not saving on first install when using the AvadaRedux API.
+* Fixed:    Added additional check in redux.js to stop errors with panels containing multiple raw fields.
+* Fixed:    Hopefully, the issue of settings not saving on first install when using the Redux API.
 * Fixed:    Set use_cdn argument to true, by default.
 * Fixed     #2437 - undefined value set to blank line height.
 * Fixed:    #2429 - Required evaluator 'contains' not working properly with multi_check
@@ -253,14 +299,14 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Fixed:    #2377 - Replaced mysql_gets_server_info with $wpdb.
 * Modified: Templates to properly excape values.
 * Fixed:    Import/Export to properly be full-width and use lazy-load JS.
-* Modified: CSS for sections to bound to the section, not all of AvadaRedux.
+* Modified: CSS for sections to bound to the section, not all of Redux.
 * Fixed:    #2368 - Options panel layout offset.
 * Fixed:    #2369 - validate_callback not working for color, color_gradient, and date.
 * Fixed:    #2355 - Space missing in switch class arg.
 * Fixed:    Fixed all fields without leading space in class arg.
-* Modified: Restrict table modification to avadaredux-container.
+* Modified: Restrict table modification to redux-container.
 * Fixed:    Container overflow for pre's.
-* Modified: AvadaRedux API to include removeSection and removeField.
+* Modified: Redux API to include removeSection and removeField.
 * Added:    Added before and after hooks to any panel template file.
 * Fixed:    #2351 - WP_Error check added to admin blast remote get.
 * Modified: Moved styling for the divide field into it's own CSS file.
@@ -270,8 +316,8 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Fixed:    Small stylings for a few fields.
 * Fixed:    Added extra qTip class.
 * Modified: Ajax save animation. Added fallback for pre 4.2 CSS.
-* Fixed:    Small issue with AvadaRedux info boxes and spacing.
-* Fixed:    Small bug with the AvadaRedux API where divide sections were causing errors.
+* Fixed:    Small issue with Redux info boxes and spacing.
+* Fixed:    Small bug with the Redux API where divide sections were causing errors.
 * Fixed:    Small admin blast fix.
 * Modified: Qtip and Spectrum vendor libraries restored to local.
 * Fixed:    Admin notice loading on front end.
@@ -284,7 +330,7 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Removed:  Local installs of above libraries.
 * Fixed:    Option panel not rendering due to experimental code.
 * Fixed:    How sorter works with data
-* Modified: How the data arg is stored in AvadaRedux.
+* Modified: How the data arg is stored in Redux.
 * Removed:  sysinfo.php.  No longer needed in lieu of our support URL feature.
 * Removed:  debug.php.  Moved to options_object extension.
 * Modified: #2274 - PHP Unit test compatibility.  Thanks @daithi-coombes.
@@ -293,7 +339,7 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 
 = 3.5.4.3 =
 * Fixed: #2258 - welcome redirect error with embedding plugin scenarios.
-* Fixed: AvadaRedux plugin load order when activating plugins.
+* Fixed: Redux plugin load order when activating plugins.
 * Fixed: #2271 - stuck redirect on godaddy (seriously, get a real host, people) servers.
 * Fixed: #2216 - Reset section not always working within FF.
 
@@ -310,7 +356,7 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Fixed:   #2228 - Submenu items still visible if permissions not allowed.
 * Fixed:   Import/Export showing up in customizer.
 * Modified: Admin-fresh theme to match new WordPress 4.2
-* Modified: AvadaRedux widget now has a proper ID. Thanks @corradomatt!
+* Modified: Redux widget now has a proper ID. Thanks @corradomatt!
 * Modified: Added text-shadow to submenu items to give a stronger "pop"
 * Modified: Page_slug now dynamically generated if not specified.
 * Modified: Admin blast message pinging server on each load after three day expiration.  Possible slow down of the overall panel loading time.
@@ -318,11 +364,11 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Fixed:   #2214: Bad path for import/export enqueue.
 * Release: Wp.org release.
 * Fixed:    #2214 - Import/export field contained bad enqueue path.
-* Modified: If running localhost or WP_DEBUG is set to true, AvadaRedux dev_mode is forced to true.
+* Modified: If running localhost or WP_DEBUG is set to true, Redux dev_mode is forced to true.
 * Modified: Page_slug now dynamically generated if not specified.
 
 = 3.5.1 =
-* Modified: AvadaRedux News dashboard widget appears only when dev_mode is true or in a local host environment.
+* Modified: Redux News dashboard widget appears only when dev_mode is true or in a local host environment.
 * Fixed     #2127 - Elusive icons not working in footer as before.
 * Fixed     Issue where Status tab not showing extension versions properly.
 * Fixed     Issue in support URL not passing data correctly.
@@ -341,12 +387,12 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Fixed:    #2176 - Infinite loop in the customizer for live preview of themes.
 * Fixed:    Support page now works.
 * Fixed:    Fix for MySQL deprecated functions in php 5.5+.
-* Added:    Dynamic admin messages (aka Newsflash).  Dismissable admin messages announcing breaking AvadaRedux news.
+* Added:    Dynamic admin messages (aka Newsflash).  Dismissable admin messages announcing breaking Redux news.
             Messages will not appear for users when dev_mode is set to `false`.  However, messages remain active
             on localhosts, so devs may benefit.
 * Fixed:    #2155 - Fixed import with ajax_save.
 * Fixed:    Changelog now uses raw field parsedown if present.
-* Added:    AvadaRedux Framework News Widget on the WP Dashboard.
+* Added:    Redux Framework News Widget on the WP Dashboard.
 * Fixed:    #2156: `label` argument not recognized when using sortable as textbox.
 * Fixed:    #2140 Another PHP 5.2 issue with ajax_save.
 * Modified: Opt groups for select field now working in customizer even if not supported.
@@ -356,14 +402,14 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Fixed:    #2125 - Compiler not firing on first save, when using ajax_save.
 * Fixed:    #2118 - Typography JS error.
 * Fixed:    Odd typography bug no one has reported.
-* Modified: Sticky header and footer to remain within the avadaredux-main container.
+* Modified: Sticky header and footer to remain within the redux-main container.
 * Fixed     #2097 - Slash fix for ajax_save that was previously believed to be an isolated issue. Now applied on all ajax saves.
 * Fixed:    #2086 - color_rgba improperly functioning when transparent mode set to false.
 * Fixed     Import/Export bug where it wasn't running.
 * Modified  Locations of the core extensions directory as well as grunt configuration.
 * Fixed     #2047 - Validation will now accept 0 as a value to be tested. Thanks @Ninos!
 * Added     url_slug validation with option flush_permalinks!
-* Fixed     Issue where the remove of background field was always showing an empty preview box.
+* Fixed     Issue where the remove of background field was always showing an empty preview box. 
 * Modified  Turned ajax_save on by default for additional bug reports.  ;)
 * Modified  Added some margin above validation errors/warnings so they look better.
 * Modified  Removed previous element border for any section so it looks better.
@@ -380,13 +426,13 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Modified: Templates now have versioning with a warning (dev_mode only) if they are outdated from the core templates.
 * Modified: Ajax saving now has overlay during save to avoid confusion for users.
 * Modified: Template files even more for simplicity and ease.
-* Modified: Saving. AvadaRedux now has the ajax_save argument if you want it!
+* Modified: Saving. Redux now has the ajax_save argument if you want it!
 * Modified: Validation warnings now work.
 * Fixed:    Changed set_transient function to public to avoid errors in new templating code.
 * Modified: Entire panel template is now decoupled from the theme and implemented with many filters for easy customization.
-* Fixed:   #1478 - Import/export failing when two instances if AvadaRedux in use.  Thanks, @desaiuditd!
+* Fixed:   #1478 - Import/export failing when two instances if Redux in use.  Thanks, @desaiuditd!
 * Fixed:   Section field not indenting properly, if at all.
-* Added:   #2031 - Proper CSS sanitization for compliancy with WP.org.
+* Added:   #2031 - Proper CSS sanitization for compliancy with WP.org. 
 * Fixed:   #2027 - added isset()
 * Fixed:   #2019 - Reset issues with PHP 5.2.  Thanks a bunch, @Webcreations907!
 * Fixed:   #2023: Issue with custom submenus in menu.
@@ -399,9 +445,9 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 
 = 3.4.0 =
 * Fixed:    Reset section hook firing too early.
-* Modified: The AvadaRedux Repeater field has landed!
+* Modified: The Redux Repeater field has landed!
 * Fixed:    #1983 - color_rgba not outputting default values on first load (before save).
-* Fixed:    Google font enqueues with opt_name to avoid collision with multiple AvadaRedux instances.
+* Fixed:    Google font enqueues with opt_name to avoid collision with multiple Redux instances.
 * Fixed:    #1980 - JS errors with sorter & sortable.
 * Fixed:    color_rgba field outputting incorrect information via output/compiler.
 * Fixed:    #1979 - Goole fonts not properly loading in typography dropdown.
@@ -413,7 +459,7 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Fixed:    #1941 - Datepicker opened off screen.
 * Fixed:    #1756, #1957 - Slider issues.  Thanks @FFIN!
 * Fixed:    #1960 - Duplicate slide when clicking Add.  Again, thanks to @FFIN for the fix.
-* Added:    New filter: apply_filters 'avadaredux/validate/{opt_name}/before_validation'
+* Added:    New filter: apply_filters 'redux/validate/{opt_name}/before_validation'
 * Fixed:    #1745 - Adding settings submenu to empty submenu now works.  Many, many thanks to @No3x for cracking this one!
 * Fixed:    #1955 - Undefined index rgba in output routine.
 * Modified: #1947 - Added display:none to TR tag under info field.
@@ -432,7 +478,7 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Removed   Argument for SASS compile file output location removed.  Didn't work, too much trouble.
 * Fixed:    #1904 - select_image field not displaying saved value on page reload.
 * Fixed:    SASS compile under multi-instance outputting incorrect CSS file
-* Fixed:    avadaredux-admin scss images converted to base64
+* Fixed:    redux-admin scss images converted to base64
 * Added     SASS compiler for admin CSS.
 * Added     SASS to CSS for grunt compiler.
 * Added     SASS compiler for fields.
@@ -471,7 +517,7 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Fixed:    #1758 - Thanks @echo1consulting!
 * Added:    'hidden' to menu_type argument to allow for hidden menus until available.
 * Fixed:    #1749 - Remove font-wight and font-style from css output when not in use.
-* Modified: Added the "avadaredux/options/{$this->args['opt_name']}/compiler/advanced" hook for more advanced compiling.
+* Modified: Added the "redux/options/{$this->args['opt_name']}/compiler/advanced" hook for more advanced compiling.
 * Added:    Suggestions as per #1709. Thanks @echo1consulting.
 * Modified: Removed a cURL instance from the core and fixed the developer ad resizing.
 * Fixed: PHP 5.2 issues. *sigh*
@@ -489,7 +535,7 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 
 = 3.3.8 =
 * Modified:   Updated potomo, thanks @shivapoudel.
-* Added: Grunt checktextdomain and made improvements. Thanks @shivapoudel.
+* Added: Grunt checktextdomain and made improvements. Thanks @shivapoudel. 
 * Modified:   #1685 - Specifying no default argument for image_select caused errors on reset.
 * Fixed:      #1667 - Slides Upload button causing JS error.
 * Fixed: #1670 - Fix for Theme Check -> `add_setting() method needs to have a sanitization callback function passed.`
@@ -501,7 +547,7 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
   * Updated .gitignore for better readability
   * Updates to a few other files including package.json.
   * Updated language files.
-  * Update codestyles/.editorconfig to reflect the project's standards.
+  * Update codestyles/.editorconfig to reflect the project's standards. 
 * Modified:  #1653 - Better admin bar with external links: Admin bar menu priority, icon, and external links. Thanks @shivapoudel!
 * Added:      #1651 - `library_filter` argument.  Allows specification of what files to display in the media library.
 * Modified:   #1651 - `mode` argument accepts either file type or mime type (but not both).
@@ -535,8 +581,8 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Fixed:      Framework URI errors when using child themes. Some restructuring.
 * Fixed:      Framework URI errors when embedded in theme with Windows.
 * Added:      image_size as an option for the data argument. Thanks @Gyroscopic!
-* Modified:   How AvadaRedux paths are run. Should cover all use cases now. Child themes can also embed
-              AvadaRedux properly now. Thanks @cfoellmann for the suggestions. Fix for issue #1566.
+* Modified:   How Redux paths are run. Should cover all use cases now. Child themes can also embed
+              Redux properly now. Thanks @cfoellmann for the suggestions. Fix for issue #1566.
 * Modified:   How we declare the uploads directory and URL. Using core WP functions now.
 * Modified:   Now if a section is empty, but has subsections, that section will be "skipped" when
               clicked and the first subsection will then be shown.
@@ -580,7 +626,7 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Fixed:      Incorrect folder CHMOD in filesystem class.
 
 = 3.3.4.6 =
-* Fixed:      #1454 - Chmod permissions for avadaredux folder.
+* Fixed:      #1454 - Chmod permissions for redux folder.
 
 = 3.3.4.5 =
 * Fixed:      #1451 - Googlefonts not loading due to failing copy function.
@@ -601,7 +647,7 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 = 3.3.4 =
 * Fixed:      Issues with file writing. Basically many users don't install WordPress with all the permissions
               correct. So... Had to move it back to ~/uploads/. Sorry Otto, that's just how it is.
-* Fixed:      #1444 - output of typography all_styles when font_style UI was hidden.
+* Fixed:      #1444 - output of typography all_styles when font_style UI was hidden.              
 * Fixed:      #1440 - flaw in new cleanFilePath logic.
 * Fixed:      #1432 - Theme check failing when double-slashes existed in get_template_directory() return.
 * Removed:    curlRead from helper class.
@@ -610,7 +656,7 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Fixed:      #1429 - ACE Editor erroring with no default value set.
 * Fixed:      wp_filesystem now initialized with credentials in an effort to combat the tmp file issue.
 * Modified:   Code purification.
-* Modified:   How section tabs work. Isolated within the avadaredux-container class.
+* Modified:   How section tabs work. Isolated within the redux-container class.
 * Modified:   #1412 - Redesigned text label, placeholder fix.
 
 = 3.3.3 =
@@ -627,10 +673,10 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Added:      #1395 - Display of child theme status in sysinfo, thanks @SiR-DanieL.
 * Fixed:      #1387 - Page jump when clicking "Options Object".  Thanks @rrikesh.
 * Added:      #1392 - Filters to change the following localized strings:
-              avadaredux/{opt_name}/localize/reset
-              avadaredux/{opt_name}/localize/reset_all
-              avadaredux/{opt_name}/localize/save_pending
-              avadaredux/{opt_name}/localize/preset
+              redux/{opt_name}/localize/reset
+              redux/{opt_name}/localize/reset_all
+              redux/{opt_name}/localize/save_pending
+              redux/{opt_name}/localize/preset
 * Fixed:      #1376 - checkbox.min.js missing.
 * Fixed:      Static variable changes for instances and basic comment cleanup
 * Fixed:      #1361 - Raw field not hiding with required.
@@ -651,7 +697,7 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Fixed:      Slides field was not properly initialized for the media elements. Fixed.
 
 = 3.3.1 =
-* Fixed:      #1337 - `avadaredux` JS dependency loading issue.  Many thanks @tpaksu
+* Fixed:      #1337 - `redux` JS dependency loading issue.  Many thanks @tpaksu
 * Modified:   Drastically changed the way JavaScript is used in the panel. Forced as-needed
               initialization of fields. Thus reducing dramatically the overall load time of
               the panel. The effects have been seen up to 300% speed improvement. The only
@@ -671,12 +717,12 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Fixed:      Minor tweaks for metabox update.
 * Fixed:      #1297 - Missing space in image_select class.
 * Fixed:      Slider field tweaked for metaboxes.
-* Fixed:      #1291 - Change of font-family would not trigger preview, or show in open preview.
+* Fixed:      #1291 - Change of font-family would not trigger preview, or show in open preview.  
 * Fixed:      #1289 - Typography not retaining size/height/spacing/word/letter spacing settings.
 * Fixed:      #1288 - Background color-picker dependency missing.  Thanks @farhanwazir.
 * Fixed:      Search extension failed do to dependency issue from the core.
 * Fixed:      #1281 - color field output/compiler outputting incorrect selector when only one array present.
-* Fixed:      Update check only appears once if multiple instances of AvadaRedux are loaded in the same wordpress instance.
+* Fixed:      Update check only appears once if multiple instances of Redux are loaded in the same wordpress instance.
 * Fixed:      Changing font-family in typography didn't trigger 'save changes' notification.
 * Fixed:      More typography: Back up font appearing in font-family when opening selector.
 * Fixed:      Typography: undefined message when NOT using google fonts.  Thanks @farhanwazir
@@ -687,12 +733,12 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Fixed:      #1264 - Color-picker/transparent checkbox functionality.
 * Fixed:      Typography fine-tuning.
 * Fixed:      All typography select fields render as select2.
-* Fixed:      Switching between transparency on and off now restores the last chosen color in all color fields.
-* Fixed:      AvadaRedux uploads dir should NOT be ~/wp-content/uploads, but just wp-content. As per Otto.
+* Fixed:      Switching between transparency on and off now restores the last chosen color in all color fields. 
+* Fixed:      Redux uploads dir should NOT be ~/wp-content/uploads, but just wp-content. As per Otto.
 * Fixed:      Navigation no longer has that annoying outline around the links. Yuk.
 * Fixed:      #1218 - Select2 multi select not accepting any keyboard input.
 * Fixed:      #1228 - CSS fixes
-* Added:      `hide_reset` argument, to hide the Reset All and Reset Section buttons.
+* Added:      `hide_reset` argument, to hide the Reset All and Reset Section buttons.        
 * Added:      `content_title` argument to slides field.  Thanks @psaikali!
 * Added:      `customizer_only` argument for fields & sections, contributed by @andreilupu.
 * Added:      select2 args for spacing field.
@@ -724,7 +770,7 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Fixed:      Hint icon defaults to left position when screen size is under 782px.
 * Fixed:      `permissions` argument for fields and sections erasing saved field data.  See #1231
 * Modified:   Woohoo! Nearly fully responsive. Yanked out all SMOF and NHP field customizations. Lots of little
-              fixes on all browser screens. This will also greatly benefit Metaboxes and other areas of AvadaRedux.
+              fixes on all browser screens. This will also greatly benefit Metaboxes and other areas of Redux.
 * Fixed:      In dev_mode panel CSS was being loaded 2x.
 * Fixed:      Typography color picker bleeding under other elements.  #1225
 * Fixed:      Hint icon_color index error from builder.  #1222
@@ -733,14 +779,14 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Added:      Network admin support! Set argument 'database' to network and data will be saved site-wide. Also
               two new arguments: network_admin & network_sites for where to show the panel.
 * Added:      Customizer hook that can be used to simulate the customizer for live preview in the customizer.
-              `avadaredux/customizer/live_preview`
+              `redux/customizer/live_preview`
 * Added:      `output` argument for `color` and `color_rgba` fields accepts key/pairs for different modes.
-* Added:      `class` argument to the AvadaRedux Arguments, section array, and metabox array. If set, a class will
+* Added:      `class` argument to the Redux Arguments, section array, and metabox array. If set, a class will
               be appended to whichever level is used. This allows further customization for our users.
 * Added:      disable_save_warn flags to the arguments to disable the "you should save" slidedown.
 * Added:      Actions hooks for errors and warnings.
-* Fixed:      AvadaRedux now ignores any directories that begin with `.` in the extension folder.  See #1213.
-* Fixed:      AvadaRedux not saving when validating uploads.
+* Fixed:      Redux now ignores any directories that begin with `.` in the extension folder.  See #1213.
+* Fixed:      Redux not saving when validating uploads.
 * Fixed:      Border field output/compiler formatting.  Removed 'inherit' in place of default values.  See #1208.
 * Fixed:      Trim() warning in framework.php when saving.  See #1209, #1201.
 * Fixed:      Typography not outputting all styles when `all_styles` set to true.
@@ -826,7 +872,7 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
                 width for sections. No more 2 empty pixels.
 * Added:        `data` and `args` can now be set to sorter! Just make sure to have it be a key based on what you
                 want it to display as. IE: `array('Main'=>'sidebars')`
-* Added:        Prevent AvadaRedux from firing on AJAX heartbeat, but added hook for it 'avadaredux/ajax/heartbeat'.
+* Added:        Prevent Redux from firing on AJAX heartbeat, but added hook for it 'redux/ajax/heartbeat'.
 * Added:        Tick mark if section has sub sections. Hidden when subsections expanded.
 * Added:        Check to make sure a field isn't empty after the filter. If it is empty, skip over it.
 * Added:        Subsections now show icon if they have it. Show text only (without indent) if they do not.
@@ -871,7 +917,7 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 
 = 3.2.0 =
 * Added:      Save warning now is sticky to the top and responsive.
-* Fixed:      Mobile fixes for AvadaRedux. Looks great on small screens how.
+* Fixed:      Mobile fixes for Redux. Looks great on small screens how.
 * Fixed:      Slight CSS fixes.
 * Fixed:      Compiler fixes and added notices.
 * Added:      Import/Export more reasonable text.
@@ -886,20 +932,20 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Added:      Multiple required parent value checking! Booya!
 * Fixed:      Sections now fold with required.
 * Fixed:      select2 not rendering properly when dev_mode = false, because of ace_editor fix.
-* Fixed:      Removed mistakenly compiled test code from avadaredux.js.
+* Fixed:      Removed mistakenly compiled test code from redux.js.
 * Fixed:      ace_editor not rendering properly in certain instances.
 * Modified:   Small change to import_export field in checking for existing instance of itself.
 * Fixed:      import_export not rendering when the menutype argument was set to menu
 * Fixed:      Ace_editor not enqueued unless used. MEMORY HOG.
 * Fixed:      Color_Gradient transparency to was being auto-selected if from way transparent.
 * Fixed:	  Enqueue select with slider for local dev.
-* Modified:   removed add_submenu_page when creating a submenu for us in the WP admin area.  WP approved API is used in it's place to being AvadaRedux up to wp.org theme check standards.
+* Modified:   removed add_submenu_page when creating a submenu for us in the WP admin area.  WP approved API is used in it's place to being Redux up to wp.org theme check standards.
 * Fixed:      Massive speed issue with button_set. Resolved.
 * Fixed:      Issue where default values throws an error if ID is not set.
 * Fixed:      Continuing effort to ensure proper loading of config from child themes.
 * Fixed:      Import/Export array search bug if section['fields'] is not defined.
 * Fixed:      Inconsistencies in import/export across different versions of PHP.
-* Fixed:      AvadaRedux checks for child or parent theme exclusively before loading.
+* Fixed:      Redux checks for child or parent theme exclusively before loading.
 
 = 3.1.9 =
 * Fixed:      Typography custom preview text/size not outputting.
@@ -918,15 +964,15 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Fixed:      link_color field showing notice on default, if user enters no defaults.
 * Fixed:      Fixed tab notice in framework.php if no tab parameter is set in URL.
 * Fixed:      Hide demo hook wasn't hiding demo links.
-* Added:      Admin notice for new builds of AvadaRedux on Github as they become available.  This feature is available on in dev_mode, and may be turned off by setting the `update_notice` argument to false.  See the Arguments page of the wiki for more details.
+* Added:      Admin notice for new builds of Redux on Github as they become available.  This feature is available on in dev_mode, and may be turned off by setting the `update_notice` argument to false.  See the Arguments page of the wiki for more details.
 * Added:      text-transform option for the typography field.
-* Added:      Newsletter sign-up popup at first load of the AvadaRedux options panel.
+* Added:      Newsletter sign-up popup at first load of the Redux options panel.
 * Added:      Added PHP 5.2 support for import/export.
 * Added:      Action hooks for options reset and options reset section.
 * Added:      Theme responsive for date picker.
 * Added:      New slider.  Better looking UI, double handles and support for floating point values.  See the wiki for more info.
 * Added:      Typography improvements.
-* Added:      Hints!  More info:  https://github.com/AvadaReduxFramework/AvadaReduxFramework/wiki/Using-Hints-in-Fields
+* Added:      Hints!  More info:  https://github.com/ReduxFramework/ReduxFramework/wiki/Using-Hints-in-Fields
 * Added:      Complete Wordpress admin color styles. Blessed LESS/SCSS mixins.  ;)
 * Added:      Font family not required for the typography module any longer.
 * Added:      Support for using the divide field in folding.
@@ -953,14 +999,14 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Fixed:    Background field now works with dynamic preview as it should.
 * Fixed:    Extension fields now enqueueing properly.
 * Added:    Text-align to typography field.
-* Fixed:    Servers returning forwards slashes in TEMPLATEPATH, while AvadaRedux is installed embedded would not show options menu.
+* Fixed:    Servers returning forwards slashes in TEMPLATEPATH, while Redux is installed embedded would not show options menu.
 * Fixed:    On and Off for switch field not displaying language translation.
 * Fixed:    email validation allowing a blank field.
 * Fixed:    Now allow for empty values as valid keys.
 * Added:    Dismiss option to admin notices (internal function)
 
 = 3.1.7 =
-* Fixed:    Servers returning forwards slashes in TEMPLATEPATH, while AvadaRedux is installed embedded would not show options menu.
+* Fixed:    Servers returning forwards slashes in TEMPLATEPATH, while Redux is installed embedded would not show options menu.
 * Fixed:    On and Off for switch field not displaying language translation.
 * Fixed:    email validation allowing a blank field.
 * Added:    Dismiss option to admin notices (internal function)
@@ -970,21 +1016,21 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 
 = 3.1.6 =
 * Fixed:    CSS spacing issue
-* Fixed:    Customizer now works and doesn't break other customizer fields outside of AvadaRedux.
+* Fixed:    Customizer now works and doesn't break other customizer fields outside of Redux.
 * Fixed:    Several minor bug fixes
-* Added:    Metabox support via extension http://avadareduxframework.com/extensions/
+* Added:    Metabox support via extension http://reduxframework.com/extensions/
 * Added:    Admin-bar menu
 * Fixed:    Section field now folds.
 * Fixed:    wp_content_dir path now handles double forward slashes.
 * Fixed:    Typography field missing italics in Google fonts.
 * Fixed:    Default color in border field not saving properly.
-* Fixed:    hex2rgba in class.avadaredux_helpers.php changed to static.
+* Fixed:    hex2rgba in class.redux_helpers.php changed to static.
 * Fixed:    'sortable' field type not saving options as default.
 * Fixed:    Specified default color not set when clicking the color box default button.
 * Fixed:    Sorter field options are now saved as default in database.
 * Fixed:    Issues with checkboxes displaying default values instead of labels.
 * Fixed:    Outstanding render issues with spacing field.
-* Fixed:    Plugins using AvadaRedux from load failure.
+* Fixed:    Plugins using Redux from load failure.
 * Fixed:    'not_empty' field validation.
 * Fixed:    Media field.
 * Added:    'read-only' option for media text field.
@@ -994,7 +1040,7 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Modified: Removed raw_align field and added align option to raw field. See wiki for more info.
 * Removed:  EDD extension. It never belonged in Core and will be re-released as a downloadable extension shortly
 * Removed:  Group field, temporarily.
-* Removed:  wp_get_current_user check.  See https://github.com/AvadaReduxFramework/AvadaReduxFramework/wiki/How-to-fix-%22Fatal-error%3A-Call-to-undefined-function-wp_get_current_user%28%29-%22
+* Removed:  wp_get_current_user check.  See https://github.com/ReduxFramework/ReduxFramework/wiki/How-to-fix-%22Fatal-error%3A-Call-to-undefined-function-wp_get_current_user%28%29-%22
 
 = 3.1.5 =
 * Typography font arrays may not contain comma spaces.
@@ -1013,7 +1059,7 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Rewrote sample_config as a class
 
 = 3.1.4 =
-* Fixed error in avadaredux-framework.php.
+* Fixed error in redux-framework.php.
 * Added select_image field.
 
 = 3.1.3 =
@@ -1042,7 +1088,7 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Fixed Sortable - Using native jQuery UI library same as within WordPress.
 * Fixed Slider and Spinner Input Field - Values now move to the closest valid value in regards to the step, automatically.
 * Fixed Ace Editor
-* FEATURE - All CSS/JS files are compiled into a single file now! Speed improvements for the backend.
+* FEATURE - All CSS/JS files are compiled into a single file now! Speed improvements for the backend. 
 * Fix in how WordPress data is received, improved some output.
 * Fix for various fields not triggering fold/compiler/save.
 * Fixed elusive icons to use the new version and classes.
@@ -1094,7 +1140,7 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 
 = 3.0.9 =
 * Feature - Added possibility to set default icon class for all sections and tabs.
-* Feature - Make is to the WP dir can be moved elsewhere and AvadaRedux still function.
+* Feature - Make is to the WP dir can be moved elsewhere and Redux still function.
 * Added Spanish Language. Thanks @vertigo7x.
 * Fix Issue 5 - Small RGBA validation fix.
 * Fix Issue 176 - Fold by Image Select. Thanks @andreilupu.
@@ -1121,8 +1167,8 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Feature - Completely redone spacing field. Choose to apply to sides or all at once with CSS output!
 * Feature - Completely redone border field. Choose to apply to sides or all at once with CSS output!
 * Feature - Added opt-in anonymous tracking, allowing us to further analyze usage.
-* Feature - Enable weekly updates of the Google Webfonts cache is desired. Also remove the Google Webfont files from shipping with AvadaRedux. Will re-download at first panel run to ensure users always have the most recent copy.
-* Language translation of german updated alone with AvadaReduxFramework pot file.
+* Feature - Enable weekly updates of the Google Webfonts cache is desired. Also remove the Google Webfont files from shipping with Redux. Will re-download at first panel run to ensure users always have the most recent copy.
+* Language translation of german updated alone with ReduxFramework pot file.
 * Fix Issue 146 - Spacing field not storing data.
 * Fix - Firefox field description rendering bug.
 * Fix - Small issue where themes without tags were getting errors from the sample data.
@@ -1138,12 +1184,12 @@ That's because the real FAQ section is on our site! Please visit [http://docs.av
 * Added consistent remove button on multi text, and used sanitize function for section id
 * Feature: Added roles as data for field data
 * Feature: Adding data layout options for multi checkbox and radio, we now have quarter, third, half, and full column layouts for these fields.
-* Feature: Eliminate REDUX_DIR and REDUX_URL constants and instead created static AvadaReduxFramework::$_url and AvadaReduxFramework::$_dir for cleaner code.
+* Feature: Eliminate REDUX_DIR and REDUX_URL constants and instead created static ReduxFramework::$_url and ReduxFramework::$_dir for cleaner code.
 Feature: Code at bottom of sample-config.php to hide plugin activation text about a demo plugin as well as code to demo how to hide the plugin demo_mode link.
 * Started work on class definitions of each field and class. Preparing for the panel builder we are planning to make.
 
 = 3.0.5 =
-* Fixed how AvadaRedux is initialised so it works in any and all files without hooking into the init function.
+* Fixed how Redux is initialised so it works in any and all files without hooking into the init function.
 * Issue #151: Added thumbnails to media and displayed those instead of full image.
 * Issue #144: Slides had error if last slide was deleted.
 * Color field was outputting hex in the wrong location.
@@ -1153,7 +1199,7 @@ Feature: Code at bottom of sample-config.php to hide plugin activation text abou
 * Fixed an odd saving issue.
 * Fixed link issues in the framework
 * Issue #135: jQuery UI wasn't being properly queued
-* Issue #140: Admin notice glitch. See http://avadareduxframework.com/2013/10/wordpress-notifications-custom-options-panels/
+* Issue #140: Admin notice glitch. See http://reduxframework.com/2013/10/wordpress-notifications-custom-options-panels/
 * Use hooks instead of custom variable for custom admin CSS
 * Added "raw" field that allows PHP or a hook to embed anything in the panel.
 * Submenus in Admin now change the tabs without reloading the page.
@@ -1177,14 +1223,14 @@ Feature: Code at bottom of sample-config.php to hide plugin activation text abou
 * Initial WordPress.org plugin release.
 
 = 3.0 =
-AvadaRedux is now hosted on WordPress.org! Update in order to get proper, stable updates.
+Redux is now hosted on WordPress.org! Update in order to get proper, stable updates.
 
 
 == Attribution ==
 
-AvadaRedux is was originally based off the following frameworks:
+Redux is was originally based off the following frameworks:
 
 * [NHP](https://github.com/leemason/NHP-Theme-Options-Framework)
 * [SMOF](https://github.com/syamilmj/Options-Framework "Slightly Modified Options Framework")
 
-It has now a completely different code base. If you like what you see, realize this is a labor of love. Please [donate to the AvadaRedux Framework](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N5AD7TSH8YA5U) if you are able.
+It has now a completely different code base. If you like what you see, realize this is a labor of love. Please [donate to the Redux Framework](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N5AD7TSH8YA5U) if you are able.

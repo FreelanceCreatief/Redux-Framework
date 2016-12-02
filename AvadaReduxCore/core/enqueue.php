@@ -442,7 +442,6 @@
 				}
 
 
-
 				$this->parent->localize_data['fieldsHidden'] = $this->parent->fieldsHidden;
 				$this->parent->localize_data['options']      = $this->parent->options;
 				$this->parent->localize_data['defaults']     = $this->parent->options_defaults;
