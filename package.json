@@ -1,8 +1,8 @@
 {
-  "name": "avadaredux-framework",
-  "version": "3.5.8",
-  "title": "AvadaReduxFramework",
-  "description": "AvadaRedux is a simple, truly extensible options framework for WordPress themes and plugins.",
+  "name": "redux-framework",
+  "version": "3.6.2",
+  "title": "ReduxFramework",
+  "description": "Redux is a simple, truly extensible options framework for WordPress themes and plugins.",
   "main": "Gruntfile.js",
   "directories": {
     "doc": "docs",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AvadaReduxFramework/AvadaReduxFramework.git"
+    "url": "https://github.com/ReduxFramework/ReduxFramework.git"
   },
   "bugs": {
-    "url": "https://github.com/AvadaReduxFramework/AvadaReduxFramework/issues"
+    "url": "https://github.com/ReduxFramework/ReduxFramework/issues"
   },
-  "author": "AvadaRedux Framework Team",
-  "license": "GPLv3+",
-  "homepage": "http://avadareduxframework.com",
+  "author": "Redux Framework Team",
+  "license": "GPLv2+",
+  "homepage": "http://reduxframework.com",
   "devDependencies": {
     "compass-options": "^0.1.1",
     "grunt": "^0.4.5",

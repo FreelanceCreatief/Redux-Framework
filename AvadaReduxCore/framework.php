@@ -15,7 +15,7 @@
 	 * @subpackage  Core
 	 * @author      AvadaRedux Framework Team
 	 */
-// Exit if accessed directly
+	// Exit if accessed directly
 	if ( ! defined( 'ABSPATH' ) ) {
 		exit;
 	}
@@ -30,7 +30,7 @@
 		add_action( 'avadaredux/init', 'AvadaReduxFrameworkInstances::get_instance' );
 	}
 
-// Don't duplicate me!
+	// Don't duplicate me!
 	if ( ! class_exists( 'AvadaReduxFramework' ) ) {
 
 		// AvadaRedux CDN class
@@ -69,7 +69,7 @@
 			// Please update the build number with each push, no matter how small.
 			// This will make for easier support when we ask users what version they are using.
 
-			public static $_version = '3.5.9.8';
+			public static $_version = '3.6.2.2';
 			public static $_dir;
 			public static $_url;
 			public static $_upload_dir;
@@ -408,7 +408,7 @@
 
 					// if ( $this->args['dev_mode'] == true || AvadaRedux_Helpers::isLocalHost() == true ) {
 					// 	require_once 'core/dashboard.php';
-					// 	new avadareduxDashboardWidget($this);
+					// 	new avadareduxDashboardWidget( $this );
 					//
 					// 	if ( ! isset ( $GLOBALS['avadaredux_notice_check'] ) ) {
 					// 		require_once 'core/newsflash.php';
@@ -435,12 +435,15 @@
 				do_action( 'avadaredux/loaded', $this );
 			}
 
-// __construct()
+			// __construct()
 
 			private function set_avadaredux_content() {
 				$upload_dir        = wp_upload_dir();
 				self::$_upload_dir = $upload_dir['basedir'] . '/avadaredux/';
-				self::$_upload_url = str_replace( array( 'https://', 'http://' ), '//', $upload_dir['baseurl'] . '/avadaredux/' );
+				self::$_upload_url = str_replace( array(
+					'https://',
+					'http://'
+				), '//', $upload_dir['baseurl'] . '/avadaredux/' );
 			}
 
 			private function set_default_args() {
@@ -620,23 +623,23 @@
 				 * @param string     The locale of the blog or from the 'locale' hook
 				 * @param string     'avadaredux-framework'  text domain
 				 */
-//                $locale = apply_filters( "avadaredux/textdomain/{$this->args['opt_name']}", get_locale(), 'avadaredux-framework' );
-//
-//                if ( strpos( $locale, '_' ) === false ) {
-//                    if ( file_exists( self::$_dir . 'languages/' . strtolower( $locale ) . '_' . strtoupper( $locale ) . '.mo' ) ) {
-//                        $locale = strtolower( $locale ) . '_' . strtoupper( $locale );
-//                    }
-//                }
+				//                $locale = apply_filters( "avadaredux/textdomain/{$this->args['opt_name']}", get_locale(), 'avadaredux-framework' );
+				//
+				//                if ( strpos( $locale, '_' ) === false ) {
+				//                    if ( file_exists( self::$_dir . 'languages/' . strtolower( $locale ) . '_' . strtoupper( $locale ) . '.mo' ) ) {
+				//                        $locale = strtolower( $locale ) . '_' . strtoupper( $locale );
+				//                    }
+				//                }
 
-				$basename = basename(__FILE__);
-				$basepath = plugin_basename(__FILE__);
-				$basepath = str_replace($basename, '', $basepath);
+				$basename = basename( __FILE__ );
+				$basepath = plugin_basename( __FILE__ );
+				$basepath = str_replace( $basename, '', $basepath );
 
 				$basepath = apply_filters( "avadaredux/textdomain/basepath/{$this->args['opt_name']}", $basepath );
 
-				load_plugin_textdomain( 'avadaredux-framework', false, $basepath . 'languages');
+				load_plugin_textdomain( 'avadaredux-framework', false, $basepath . 'languages' );
 			}
-// _internationalization()
+			// _internationalization()
 
 			/**
 			 * @return AvadaReduxFramework
@@ -646,7 +649,7 @@
 				return self::$instance;
 			}
 
-// get_instance()
+			// get_instance()
 
 			private function _tracking() {
 				if ( file_exists( dirname( __FILE__ ) . '/inc/tracking.php' ) ) {
@@ -655,7 +658,7 @@
 					$tracking->load( $this );
 				}
 			}
-// _tracking()
+			// _tracking()
 
 			/**
 			 * ->_get_default(); This is used to return the default value if default_show is set
@@ -680,7 +683,7 @@
 
 				return $default;
 			}
-// _get_default()
+			// _get_default()
 
 			/**
 			 * ->get(); This is used to return and option value from the options array
@@ -696,7 +699,7 @@
 			public function get( $opt_name, $default = null ) {
 				return ( ! empty ( $this->options[ $opt_name ] ) ) ? $this->options[ $opt_name ] : $this->_get_default( $opt_name, $default );
 			}
-// get()
+			// get()
 
 			/**
 			 * ->set(); This is used to set an arbitrary option in the options array
@@ -715,7 +718,7 @@
 					$this->set_options( $this->options );
 				}
 			}
-// set()
+			// set()
 
 			/**
 			 * Set a global variable by the global_variable argument
@@ -750,7 +753,7 @@
 
 				return false;
 			}
-// set_global_variable()
+			// set_global_variable()
 
 			/**
 			 * ->set_options(); This is used to set an arbitrary option in the options array
@@ -807,7 +810,7 @@
 					//do_action( "avadaredux/options/{$this->args['opt_name']}/saved", $value, $this->transients['changed_values'] );
 				}
 			}
-// set_options()
+			// set_options()
 
 			/**
 			 * ->get_options(); This is used to get options from the database
@@ -854,7 +857,7 @@
 				// Set a global variable by the global_variable argument.
 				$this->set_global_variable();
 			}
-// get_options()
+			// get_options()
 
 			/**
 			 * ->get_wordpress_date() - Get Wordpress specific data from the DB and return in a usable array
@@ -863,7 +866,7 @@
 			 */
 			public function get_wordpress_data( $type = false, $args = array() ) {
 				$data = "";
-//return $data;
+				//return $data;
 				/**
 				 * filter 'avadaredux/options/{opt_name}/wordpress_data/{type}/'
 				 *
@@ -1085,7 +1088,7 @@
 
 				return $data;
 			}
-// get_wordpress_data()
+			// get_wordpress_data()
 
 			/**
 			 * ->show(); This is used to echo and option value from the options array
@@ -1106,7 +1109,7 @@
 					echo $this->_get_default( $opt_name, $default );
 				}
 			}
-// show()
+			// show()
 
 			/**
 			 * Get the default value for an option
@@ -1146,7 +1149,7 @@
 					$this->fields[ $field['type'] ] = array( $field['id'] => 1 );
 				}
 				if ( isset ( $field['default'] ) ) {
-					$this->options_defaults[ $field['id'] ] = $field['default'];
+					$this->options_defaults[ $field['id'] ] = apply_filters( "avadaredux/{$this->args['opt_name']}/field/{$field['type']}/defaults", $field['default'], $field );
 				} elseif ( ( $field['type'] != "ace_editor" ) ) {
 					// Sorter data filter
 
@@ -1268,10 +1271,10 @@
 					}
 					$this->dev_mode_forced  = true;
 					$this->args['dev_mode'] = true;
-					if ( isset( $this->args['forced_dev_mode_off'] ) && $this->args['forced_dev_mode_off'] == true ) {
-						$this->dev_mode_forced  = false;
-						$this->args['dev_mode'] = false;
-					}
+					// if ( isset( $this->args['forced_dev_mode_off'] ) && $this->args['forced_dev_mode_off'] == true ) {
+					// 	$this->dev_mode_forced  = false;
+					// 	$this->args['dev_mode'] = false;
+					// }
 				}
 
 				// Auto create the page_slug appropriately
@@ -1463,7 +1466,7 @@
 
 				add_action( "load-{$this->page}", array( &$this, '_load_page' ) );
 			}
-// _options_page()
+			// _options_page()
 
 			/**
 			 * Add admin bar menu
@@ -1518,7 +1521,7 @@
 					// Let's deal with external links
 					if ( isset ( $this->args['admin_bar_links'] ) ) {
 
-						if (!$this->args['dev_mode'] && $this->omit_admin_items) {
+						if ( ! $this->args['dev_mode'] && $this->omit_admin_items ) {
 							return;
 						}
 
@@ -1561,7 +1564,7 @@
 					$wp_admin_bar->add_node( $nodeargs );
 				}
 			}
-// _admin_bar_menu()
+			// _admin_bar_menu()
 
 			/**
 			 * Output dynamic CSS at bottom of HEAD
@@ -1691,7 +1694,7 @@
 					}
 				}
 			}
-// _enqueue_output()
+			// _enqueue_output()
 
 			/**
 			 * Enqueue CSS/JS for options page
@@ -1706,7 +1709,7 @@
 				$enqueue = new avadareduxCoreEnqueue ( $this );
 				$enqueue->init();
 			}
-// _enqueue()
+			// _enqueue()
 
 			/**
 			 * Show page help
@@ -1739,11 +1742,11 @@
 					$hint_status = get_user_meta( $current_user->ID, 'ignore_hints' ) ? get_user_meta( $current_user->ID, 'ignore_hints', true ) : 'true';
 
 					// current page parameters
-					$curPage = $_GET['page'];
+					$curPage = esc_attr( $_GET['page'] );
 
 					$curTab = '0';
 					if ( isset ( $_GET['tab'] ) ) {
-						$curTab = esc_attr($_GET['tab']);
+						$curTab = esc_attr( $_GET['tab'] );
 					}
 
 					// Default url values for enabling hints.
@@ -1807,7 +1810,7 @@
 				 */
 				do_action( "avadaredux/page/{$this->args['opt_name']}/load", $screen );
 			}
-// _load_page()
+			// _load_page()
 
 			/**
 			 * Do action avadaredux-admin-head for options page
@@ -1833,7 +1836,7 @@
 				 */
 				do_action( "avadaredux/page/{$this->args['opt_name']}/header", $this );
 			}
-// admin_head()
+			// admin_head()
 
 			/**
 			 * Return footer text
@@ -1845,7 +1848,7 @@
 			public function admin_footer_text() {
 				return $this->args['footer_credit'];
 			}
-// admin_footer_text()
+			// admin_footer_text()
 
 			/**
 			 * Return default output string for use in panel
@@ -1907,7 +1910,7 @@
 				return $default_output;
 			}
 
-// get_default_output_string()
+			// get_default_output_string()
 
 			public function get_header_html( $field ) {
 				global $current_user;
@@ -1929,7 +1932,7 @@
 
 						// Get user pref for displaying hints.
 						$metaVal = get_user_meta( $current_user->ID, 'ignore_hints', true );
-						if ( 'true' == $metaVal || empty ( $metaVal ) && empty( $hint )  ) {
+						if ( 'true' == $metaVal || empty ( $metaVal ) && empty( $hint ) ) {
 
 							// Set hand cursor for clickable hints
 							$pointer = '';
@@ -2405,7 +2408,7 @@
 					$this->set_transients();
 				}
 			}
-// _register_settings()
+			// _register_settings()
 
 			/**
 			 * Register Extensions for use
@@ -2517,7 +2520,7 @@
 			 * @return array|mixed|string|void
 			 */
 			public function _validate_options( $plugin_options ) {
-//print_r($plugin_options);
+				//print_r($plugin_options);
 				//              exit();
 				if ( isset ( $this->validation_ran ) ) {
 					return $plugin_options;
@@ -2619,10 +2622,6 @@
 					 */
 					$plugin_options = apply_filters( "avadaredux/validate/{$this->args['opt_name']}/defaults", $this->options_defaults );
 
-					// Section reset
-					//setcookie('avadaredux-compiler-' . $this->args['opt_name'], 1, time() + 3000, '/');
-
-
 					$this->transients['changed_values'] = array();
 
 					if ( empty ( $this->options ) ) {
@@ -2692,11 +2691,11 @@
 					return $plugin_options;
 				}
 
-//                if ($this->transients['last_save_mode'] != 'remove') {
+				//                if ($this->transients['last_save_mode'] != 'remove') {
 				$this->transients['last_save_mode'] = "normal"; // Last save mode
-//               } else {
-//                    $this->transients['last_save_mode'] = '';
-//                }
+				//               } else {
+				//                    $this->transients['last_save_mode'] = '';
+				//                }
 
 				/**
 				 * apply_filters 'avadaredux/validate/{opt_name}/before_validation'
@@ -2953,7 +2952,17 @@
 									$plugin_options[ $field['id'] ] = 0;
 								}
 							}
+							
+//                            if ( isset ( $field['type'] ) && $field['type'] == 'typography' ) {
+//                                if ( ! is_array( $plugin_options[ $field['id'] ] ) && ! empty( $plugin_options[ $field['id'] ] ) ) {
+//                                    $plugin_options[ $field['id'] ] = json_decode( $plugin_options[ $field['id'] ], true );
+//                                }
+//                            }
 
+                            if ( isset( $this->extensions[ $field['type'] ] ) && method_exists( $this->extensions[ $field['type'] ], '_validate_values' ) ) {
+                                $plugin_options = $this->extensions[ $field['type'] ]->_validate_values( $plugin_options, $field, $sections );
+
+                            }
 							// Default 'not_empty 'flag to false.
 							$isNotEmpty = false;
 
@@ -2978,7 +2987,10 @@
 								if ( ! $isNotEmpty ) {
 
 									// Empty id and not checking for 'not_empty.  Bail out...
-									continue;
+									if (!isset($field['validate_callback'])) {
+										continue;
+									}
+									//continue;
 								}
 							}
 
@@ -3058,10 +3070,14 @@
 											}
 										}
 									} else {
-										if ( is_array( $plugin_options[ $field['id'] ] ) ) {
-											$pofi = $plugin_options[ $field['id'] ];
+										if ( isset( $plugin_options[ $field['id'] ] ) ) {
+                                            if ( is_array( $plugin_options[ $field['id'] ] ) ) {
+                                                $pofi = $plugin_options[ $field['id'] ];
+                                            } else {
+                                                $pofi = trim( $plugin_options[ $field['id'] ] );
+                                            }
 										} else {
-											$pofi = trim( $plugin_options[ $field['id'] ] );
+											$pofi = null;
 										}
 
 										$validation                     = new $validate ( $this, $field, $pofi, $options[ $field['id'] ] );
@@ -3090,6 +3106,7 @@
 									$this->errors[] = $callbackvalues['error'];
 								}
 								// TODO - This warning message is failing. Hmm.
+								// No it isn't.  Problem was in the sample-config - kp
 								if ( isset ( $callbackvalues['warning'] ) ) {
 									$this->warnings[] = $callbackvalues['warning'];
 								}
@@ -3215,7 +3232,8 @@
 									$icon = str_replace( 'el-icon-', 'el el-', $icon );
 								}
 
-								$section[ $nextK ]['class'] = isset ( $section[ $nextK ]['class'] ) ? $section[ $nextK ]['class'] : '';
+								$sections[ $nextK ]['class'] = isset($sections[ $nextK ]['class']) ? $sections[ $nextK ]['class'] : '';
+								$section[ $nextK ]['class'] = isset ( $section[ $nextK ]['class'] ) ? $section[ $nextK ]['class'] : $sections[ $nextK ]['class'];
 								$string .= '<li id="' . esc_attr( $nextK . $suffix ) . '_section_group_li" class="avadaredux-group-tab-link-li ' . esc_attr( $hide_sub ) . esc_attr( $section[ $nextK ]['class'] ) . ( $icon ? ' hasIcon' : '' ) . '">';
 								$string .= '<a href="javascript:void(0);" id="' . esc_attr( $nextK . $suffix ) . '_section_group_li_a" class="avadaredux-group-tab-link-a" data-key="' . esc_attr( $nextK ) . '" data-rel="' . esc_attr( $nextK . $suffix ) . '" data-css-id="' . esc_attr( $sections[ $nextK ]['id'] ) . '">' . $icon . '<span class="group_title">' . wp_kses_post( $sections[ $nextK ]['title'] ) . '</span></a>';
 								$string .= '</li>';
@@ -3230,7 +3248,7 @@
 
 				return $string;
 			}
-// section_menu()
+			// section_menu()
 
 			/**
 			 * HTML OUTPUT.
@@ -3257,7 +3275,8 @@
 			 * @return      void
 			 */
 			public function _section_desc( $section ) {
-				$id = trim( rtrim( $section['id'], '_section' ), $this->args['opt_name'] );
+				$id = rtrim( $section['id'], '_section' );
+				$id = str_replace($this->args['opt_name'], '', $id);
 
 				if ( isset ( $this->sections[ $id ]['desc'] ) && ! empty ( $this->sections[ $id ]['desc'] ) ) {
 					echo '<div class="avadaredux-section-desc">' . $this->sections[ $id ]['desc'] . '</div>';
@@ -3369,7 +3388,7 @@
 					$field_class = "AvadaReduxFramework_{$field['type']}";
 
 					if ( ! class_exists( $field_class ) ) {
-//                    $class_file = apply_filters( 'avadaredux/field/class/'.$field['type'], self::$_dir . 'inc/fields/' . $field['type'] . '/field_' . $field['type'] . '.php', $field ); // REMOVE
+						//                    $class_file = apply_filters( 'avadaredux/field/class/'.$field['type'], self::$_dir . 'inc/fields/' . $field['type'] . '/field_' . $field['type'] . '.php', $field ); // REMOVE
 						/**
 						 * filter 'avadaredux/{opt_name}/field/class/{field.type}'
 						 *
@@ -3562,7 +3581,7 @@
 					}
 				}
 			}
-// _field_input()
+			// _field_input()
 
 			/**
 			 * Can Output CSS
@@ -3605,7 +3624,7 @@
 
 				return $return;
 			}
-// _can_output_css
+			// _can_output_css
 
 			/**
 			 * Checks dependencies between objects based on the $field['required'] array
@@ -3739,19 +3758,19 @@
 							}
 						}
 
-//                        if ( is_array( $checkValue ) ) {
-//                            if ( ! in_array( $parentValue, $checkValue ) ) {
-//                                $return = true;
-//                            }
-//                        } else {
-//                            if ( $parentValue != $checkValue ) {
-//                                $return = true;
-//                            } else if ( is_array( $parentValue ) ) {
-//                                if ( ! in_array( $checkValue, $parentValue ) ) {
-//                                    $return = true;
-//                                }
-//                            }
-//                        }
+						//                        if ( is_array( $checkValue ) ) {
+						//                            if ( ! in_array( $parentValue, $checkValue ) ) {
+						//                                $return = true;
+						//                            }
+						//                        } else {
+						//                            if ( $parentValue != $checkValue ) {
+						//                                $return = true;
+						//                            } else if ( is_array( $parentValue ) ) {
+						//                                if ( ! in_array( $checkValue, $parentValue ) ) {
+						//                                    $return = true;
+						//                                }
+						//                            }
+						//                        }
 						break;
 					case '>':
 					case 'greater':
@@ -3944,12 +3963,12 @@
 				$merged = $array1;
 
 				foreach ( $array2 as $key => $value ) {
-					if ( is_array( $value ) && isset( $merged[$key] ) && is_array( $merged[$key] ) ) {
-						$merged[$key] = $this->avadaredux_array_merge_recursive_distinct( $merged[$key], $value );
-					} else if ( is_numeric( $key ) && isset( $merged[$key] ) ) {
+					if ( is_array( $value ) && isset( $merged[ $key ] ) && is_array( $merged[ $key ] ) ) {
+						$merged[ $key ] = $this->avadaredux_array_merge_recursive_distinct( $merged[ $key ], $value );
+					} else if ( is_numeric( $key ) && isset( $merged[ $key ] ) ) {
 						$merged[] = $value;
 					} else {
-						$merged[$key] = $value;
+						$merged[ $key ] = $value;
 					}
 				}
 
@@ -3957,14 +3976,14 @@
 			}
 
 			private function change_demo_defaults() {
-				if ($this->args['dev_mode'] == true || AvadaRedux_Helpers::isLocalHost() == true) {
-					if (!empty($this->args['admin_bar_links'])) {
-						foreach($this->args['admin_bar_links'] as $idx => $arr) {
-							if (is_array($arr) && !empty($arr)) {
-								foreach($arr as $x => $y) {
-									if (strpos(strtolower($y), 'avadaredux') >= 0) {
-										$msg = __('<strong>AvadaRedux Framework Notice: </strong>There are references to the AvadaRedux Framework support site in your config\'s <code>admin_bar_links</code> argument.  This is sample data.  Please change or remove this data before shipping your product.', 'avadaredux-framework');
-										$this->display_arg_change_notice('admin', $msg);
+				if ( $this->args['dev_mode'] == true || AvadaRedux_Helpers::isLocalHost() == true) {
+					if ( ! empty( $this->args['admin_bar_links'] ) ) {
+						foreach ( $this->args['admin_bar_links'] as $idx => $arr ) {
+							if ( is_array( $arr ) && ! empty( $arr ) ) {
+								foreach( $arr as $x => $y ) {
+									if ( strpos( strtolower( $y ), 'avadaredux') >= 0 ) {
+										$msg = __( '<strong>AvadaRedux Framework Notice: </strong>There are references to the AvadaRedux Framework support site in your config\'s <code>admin_bar_links</code> argument.  This is sample data.  Please change or remove this data before shipping your product.', 'avadaredux-framework' );
+										$this->display_arg_change_notice( 'admin', $msg );
 										$this->omit_admin_items = true;
 										continue;
 									}
@@ -3973,13 +3992,13 @@
 						}
 					}
 
-					if (!empty($this->args['share_icons'])) {
-						foreach($this->args['share_icons'] as $idx => $arr) {
-							if (is_array($arr) && !empty($arr)) {
-								foreach($arr as $x => $y) {
-									if (strpos(strtolower($y), 'avadaredux') >= 0) {
-										$msg = __('<strong>AvadaRedux Framework Notice: </strong>There are references to the AvadaRedux Framework support site in your config\'s <code>share_icons</code> argument.  This is sample data.  Please change or remove this data before shipping your product.', 'avadaredux-framework');
-										$this->display_arg_change_notice('share', $msg);
+					if ( ! empty( $this->args['share_icons'] ) ) {
+						foreach ( $this->args['share_icons'] as $idx => $arr ) {
+							if ( is_array( $arr ) && ! empty( $arr ) ) {
+								foreach ( $arr as $x => $y ) {
+									if ( strpos( strtolower( $y ), 'avadaredux' ) >= 0 ) {
+										$msg = __( '<strong>AvadaRedux Framework Notice: </strong>There are references to the AvadaRedux Framework support site in your config\'s <code>share_icons</code> argument.  This is sample data.  Please change or remove this data before shipping your product.', 'avadaredux-framework' );
+										$this->display_arg_change_notice( 'share', $msg );
 										$this->omit_share_icons = true;
 									}
 								}
@@ -3990,9 +4009,9 @@
 				}
 			}
 
-			private function display_arg_change_notice($mode, $msg = '') {
-				if ($mode == 'admin') {
-					if (!$this->omit_admin_items) {
+			private function display_arg_change_notice( $mode, $msg = '' ) {
+				if ( $mode == 'admin' ) {
+					if ( ! $this->omit_admin_items ) {
 						$this->admin_notices[] = array(
 							'type'    => 'error',
 							'msg'     => $msg,
@@ -4002,8 +4021,8 @@
 					}
 				}
 
-				if ($mode == 'share') {
-					if (!$this->omit_share_icons) {
+				if ( $mode == 'share' ) {
+					if ( ! $this->omit_share_icons ) {
 						$this->admin_notices[] = array(
 							'type'    => 'error',
 							'msg'     => $msg,

@@ -12,9 +12,9 @@
  * Description:     AvadaRedux is a simple, truly extensible options framework for WordPress themes and plugins.
  * Author:          Team AvadaRedux
  * Author URI:      http://avadareduxframework.com
- * Version:         3.5.9.8
+ * Version:         3.6.2.2
  * Text Domain:     avadaredux-framework
- * License:         GPL3+
+ * License:         GPL2+
  * License URI:     http://www.gnu.org/licenses/gpl-3.0.txt
  * Domain Path:     AvadaReduxCore/languages
  * Provides:        AvadaReduxFramework

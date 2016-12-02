@@ -116,3 +116,11 @@
 #avadaredux-share {
     float:right !important;
 }
+
+.redux-sidebar {
+    .redux-menu-warning,
+    .redux-menu-error,
+    .hasSubSections .extraIconSubsections {
+        float: left;
+    }
+}

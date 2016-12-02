@@ -18,12 +18,12 @@
 	 * @version     0.1.0
 	 */
 
-// Exit if accessed directly
+	 // Exit if accessed directly
 	if ( ! defined( 'ABSPATH' ) ) {
 		exit;
 	}
 
-// Don't duplicate me!
+	// Don't duplicate me!
 	if ( ! class_exists( 'AvadaReduxFramework_extension_customizer' ) ) {
 
 		/**
@@ -60,7 +60,6 @@
 				$this->parent = $parent;
 
 				$this->upload_dir = AvadaReduxFramework::$_upload_dir . 'advanced-customizer/';
-				$this->upload_url = AvadaReduxFramework::$_upload_url . 'advanced-customizer/';
 
 				//add_action('wp_head', array( $this, '_enqueue_new' ));
 				if ( $parent->args['customizer'] == false ) {
@@ -82,8 +81,8 @@
 				}
 
 				if ( empty( $this->_extension_dir ) ) {
-					$this->_extension_dir = AvadaRedux_Helpers::get_extension_dir( dirname( __FILE__ ) );
-					$this->_extension_url = AvadaRedux_Helpers::get_extension_url( dirname( __FILE__ ) );
+					$this->_extension_dir = trailingslashit( str_replace( '\\', '/', dirname( __FILE__ ) ) );
+					$this->_extension_url = site_url( str_replace( trailingslashit( str_replace( '\\', '/', ABSPATH ) ), '', $this->_extension_dir ) );
 				}
 
 				self::get_post_values();
